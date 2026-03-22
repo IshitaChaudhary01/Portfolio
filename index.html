@@ -284,10 +284,37 @@
       position: relative;
     }
 
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
     .hero-content {
-      max-width: 900px;
+      flex: 1;
+      min-width: 300px;
       z-index: 2;
       position: relative;
+    }
+    .hero-image-wrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      min-width: 300px;
+      z-index: 2;
+    }
+    .hero-image {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 30px;
+      box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.4);
     }
 
     .tagline {
@@ -1174,24 +1201,29 @@
 
   <!-- Home Section -->
   <section id="home">
-    <div class="container hero-content">
-      <span class="tagline reveal">Hello, World. I am</span>
-      <h1 class="reveal reveal-delay-1">Ishita Chaudhary</h1>
-      <div class="typewriter-container reveal reveal-delay-1">
-        <span class="typewriter-text" id="typewriter"></span>
-      </div>
-      <p class="hero-desc reveal reveal-delay-2">CS undergrad at Lovely Professional University, passionate about
-        building scalable web apps and intelligent systems. I turn complex problems into elegant, efficient, and robust
-        solutions.</p>
-      <div class="reveal reveal-delay-2" style="display: flex; gap: 20px; flex-wrap: wrap;">
-        <a href="#projects" class="btn btn-solid">View My Work <i class="fas fa-arrow-right"></i></a>
-        <a href="#cv" class="btn">Download CV <i class="fas fa-download"></i></a>
-      </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="tagline reveal">Hello, World. I am</span>
+        <h1 class="reveal reveal-delay-1">Ishita Chaudhary</h1>
+        <div class="typewriter-container reveal reveal-delay-1">
+          <span class="typewriter-text" id="typewriter"></span>
+        </div>
+        <p class="hero-desc reveal reveal-delay-2">CS undergrad at Lovely Professional University, passionate about
+          building scalable web apps and intelligent systems. I turn complex problems into elegant, efficient, and robust
+          solutions.</p>
+        <div class="reveal reveal-delay-2" style="display: flex; gap: 20px; flex-wrap: wrap;">
+          <a href="#projects" class="btn btn-solid">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="#cv" class="btn">Download CV <i class="fas fa-download"></i></a>
+        </div>
 
-      <div class="social-hero reveal reveal-delay-2">
-        <a href="https://github.com/IshitaChaudhary01" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ishita-chaudhary01/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="mailto:ishita8743@gmail.com"><i class="fas fa-envelope"></i></a>
+        <div class="social-hero reveal reveal-delay-2">
+          <a href="https://github.com/IshitaChaudhary01" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/ishita-chaudhary01/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:ishita8743@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image-wrapper reveal reveal-delay-2">
+        <img src="assets/profile.jpeg" alt="Ishita Chaudhary" class="hero-image">
       </div>
     </div>
   </section>
